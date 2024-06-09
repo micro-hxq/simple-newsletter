@@ -1,8 +1,8 @@
 use std::io::Error;
 use std::net::TcpListener;
 
-use actix_web::{App, HttpRequest, HttpResponse, HttpServer, Responder};
 use actix_web::dev::Server;
+use actix_web::{App, HttpRequest, HttpResponse, HttpServer, Responder};
 
 async fn health(_req: HttpRequest) -> impl Responder {
     HttpResponse::Ok().body("ok")
